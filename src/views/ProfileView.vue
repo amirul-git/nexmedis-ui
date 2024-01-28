@@ -72,6 +72,7 @@ export default {
     },
     onLogout() {
       localStorage.removeItem("token");
+      localStorage.removeItem("name");
       this.$router.replace("/login");
     },
   },
