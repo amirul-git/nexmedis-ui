@@ -21,7 +21,7 @@ export default {
     async fetchPost() {
       const jwt = localStorage.getItem("token");
       const res = await axios.get(
-        `http://127.0.0.1:8000/api/posts/${this.$route.params.id}`,
+        `http://13.215.209.83/api/posts/${this.$route.params.id}`,
         {
           headers: {
             Authorization: `Bearer ${jwt}`,
@@ -46,7 +46,7 @@ export default {
       console.log(jwt);
 
       const res = await axios.post(
-        `http://localhost:8000/api/posts/${this.id}`,
+        `http://13.215.209.83/api/posts/${this.id}`,
         {
           caption: this.caption,
           _method: "put",
@@ -64,7 +64,7 @@ export default {
       const jwt = localStorage.getItem("token");
       console.log(jwt);
       const res = await axios.post(
-        `http://localhost:8000/api/posts/${this.id}`,
+        `http://13.215.209.83/api/posts/${this.id}`,
         {
           _method: "delete",
         },
@@ -96,7 +96,7 @@ export default {
       <div id="preview">
         <img
           class="rounded-lg w-full h-[340px] object-cover"
-          :src="`http://localhost:8000/storage/${photo}`"
+          :src="`http://13.215.209.83/storage/${photo}`"
         />
       </div>
       <div class="mt-4">

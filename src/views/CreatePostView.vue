@@ -28,7 +28,7 @@ export default {
       console.log(jwt);
 
       const { data } = await axios.post(
-        "http://127.0.0.1:8000/api/posts",
+        "http://13.215.209.83/api/posts",
         {
           caption: this.caption,
           photo: this.imageFile,

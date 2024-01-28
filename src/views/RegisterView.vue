@@ -19,7 +19,7 @@ export default {
   },
   methods: {
     async onSubmit() {
-      const res = await axios.post("http://127.0.0.1:8000/api/register", {
+      const res = await axios.post("http://13.215.209.83/api/register", {
         name: this.name,
         email: this.email,
         password: this.password,
