@@ -28,7 +28,7 @@ export default {
       console.log(jwt);
 
       const { data } = await axios.post(
-        "http://13.215.209.83/api/posts",
+        "https://jetset.dev/api/posts",
         {
           caption: this.caption,
           photo: this.imageFile,

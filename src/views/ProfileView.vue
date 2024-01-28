@@ -20,7 +20,7 @@ export default {
     async fetchPost() {
       const jwt = localStorage.getItem("token");
       console.log(jwt);
-      const res = await axios.get("http://13.215.209.83/api/user/posts", {
+      const res = await axios.get("https://jetset.dev/api/user/posts", {
         headers: {
           Authorization: `Bearer ${jwt}`,
         },
@@ -35,7 +35,7 @@ export default {
         this.$router.replace("/login");
       }
       const res = await axios.post(
-        `http://13.215.209.83/api/posts/${postID}/likes`,
+        `https://jetset.dev/api/posts/${postID}/likes`,
         {
           post_id: postID,
         },
@@ -56,7 +56,7 @@ export default {
     async onComments(postID) {
       const jwt = localStorage.getItem("token");
       const res = await axios.post(
-        `http://13.215.209.83/api/posts/${postID}/comments`,
+        `https://jetset.dev/api/posts/${postID}/comments`,
         {
           post_id: postID,
           text: this.comment[postID],
@@ -155,7 +155,7 @@ export default {
             <img
               @dblclick="onLikes(id)"
               class="w-full cursor-pointer rounded-lg"
-              :src="`${photo ? 'http://13.215.209.83/storage/' + photo : ''}`"
+              :src="`${photo ? 'https://jetset.dev/storage/' + photo : ''}`"
               alt=""
             />
           </div>

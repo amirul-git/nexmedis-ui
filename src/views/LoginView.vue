@@ -17,7 +17,7 @@ export default {
   },
   methods: {
     async onSubmit() {
-      const res = await axios.post("http://13.215.209.83/api/login", {
+      const res = await axios.post("https://jetset.dev/api/login", {
         email: this.email,
         password: this.password,
       });
